@@ -159,7 +159,7 @@ void SDLGraphicsProgram::Loop() {
       new SceneNode(grassPtr, "./shaders/s_vert.glsl", "./shaders/s_frag.glsl");
 
   // create grid of buildings
-  City = new GridNode(15, 10, "../common/objects/cube.obj",
+  City = new GridNode(3, 5, "../common/objects/cube.obj",
                       "../common/textures/tile.ppm", "./shaders/s_vert.glsl",
                       "./shaders/s_frag.glsl");
 
