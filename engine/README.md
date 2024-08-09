@@ -2,11 +2,7 @@
 
 <img src="../common/header.jpg">
 
-*1. `cd engine`* 
 
-*2. `python3.11 build.py`*
-
-*3. `./main`* 
 
 ## Description
 
@@ -18,8 +14,13 @@ This project is based off that original project with the hope of expanding on it
   
   
 ## How to run this project
+*1. `cd engine`* 
 
-Use [build.py](./build.py). You can modify [build.py](./build.py) to your needs, but you should be able to type `python3 build.py` and then run the generated executable. You should have SDL 3 as well. 
+*2. `python3.11 build/build.py`*
+
+*3. `./main`* 
+
+You can modify [build.py] to your needs, but you should be able to type `python3.11 build.py` and then run the generated executable. You should have SDL 3 as well. 
 
 
 ### Even more Project Ideas

@@ -202,12 +202,6 @@ void SDLGraphicsProgram::Loop() {
         quit = true;
       }
       // Handle keyboard input for the camera class
-      if (e.type == SDL_EVENT_MOUSE_MOTION) {
-        // Handle mouse movements
-        int mouseX = e.motion.x;
-        int mouseY = e.motion.y;
-        m_renderer->GetCamera(0)->MouseLook(mouseX, mouseY);
-      }
       switch (e.type) {
         // Handle keyboard presses
         case SDL_EVENT_KEY_DOWN:
@@ -235,6 +229,12 @@ void SDLGraphicsProgram::Loop() {
               break;
           }
           break;
+
+        case SDL_EVENT_MOUSE_MOTION:
+          // Handle mouse movements
+          int mouseX = e.motion.x;
+          int mouseY = e.motion.y;
+          m_renderer->GetCamera(0)->MouseLook(mouseX, mouseY);
       }
     }  // End SDL_PollEvent loop.
        // ================== Use the planets ===============
