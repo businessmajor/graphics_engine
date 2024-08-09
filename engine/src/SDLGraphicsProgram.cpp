@@ -196,13 +196,12 @@ void SDLGraphicsProgram::Loop() {
   while (!quit) {
     // Handle events on queue
     while (SDL_PollEvent(&e)) {
-      // User posts an event to quit
-      // An example is hitting the "x" in the corner of the window.
-      if (e.type == SDL_EVENT_QUIT) {
-        quit = true;
-      }
-      // Handle keyboard input for the camera class
       switch (e.type) {
+        // Handle quit event
+        case SDL_EVENT_QUIT:
+          quit = true;
+          break;
+
         // Handle keyboard presses
         case SDL_EVENT_KEY_DOWN:
           switch (e.key.keysym.sym) {
@@ -226,12 +225,12 @@ void SDLGraphicsProgram::Loop() {
               break;
             case SDLK_ESCAPE:
               quit = true;
-              break;
+              // break;
           }
           break;
 
+        // Handle mouse movements
         case SDL_EVENT_MOUSE_MOTION:
-          // Handle mouse movements
           int mouseX = e.motion.x;
           int mouseY = e.motion.y;
           m_renderer->GetCamera(0)->MouseLook(mouseX, mouseY);
