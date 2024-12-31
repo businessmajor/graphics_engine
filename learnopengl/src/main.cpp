@@ -23,7 +23,7 @@ GLuint gGraphicsPipelineShaderProgram = 0;
 // Vertex shader executes once per vertex, and will be in charge of
 // the final position of the vertex.
 const std::string gVertexShaderSource =
-    "#version 410 core\n"
+    "#version 330 core\n"
     "in vec4 position;\n"
     "void main()\n"
     "{\n"
@@ -35,7 +35,7 @@ const std::string gVertexShaderSource =
 // that will be rasterized), and in part determines the final color that will be
 // sent to the screen.
 const std::string gFragmentShaderSource =
-    "#version 410 core\n"
+    "#version 330 core\n"
     "out vec4 color;\n"
     "void main()\n"
     "{\n"
@@ -123,8 +123,8 @@ void InitializeProgram() {
     exit(1);
   }
 
-  SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 4);
-  SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 1);
+  SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
+  SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 3);
   SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
   SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
   SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 24);
