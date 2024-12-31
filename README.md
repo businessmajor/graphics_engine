@@ -4,7 +4,9 @@
 
 Based on my final project for Computer Graphics during grad school. Cheers :)
 
-From the graphics_engine directory, compile with python3 engine/build/build.py
+Navigate to the graphics_engine/engine folder in your terminal and compile with python3 build/build.py 
+
+Run with ./engine
 
 Requires SDL3
 
