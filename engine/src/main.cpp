@@ -1,4 +1,3 @@
-// Functionality that we created
 #include "SDLGraphicsProgram.hpp"
 
 int main(int argc, char** argv){

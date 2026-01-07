@@ -187,7 +187,7 @@ void SDLGraphicsProgram::Loop() {
   // that are related to input and output
   SDL_Event e;
   // Enable text input
-  SDL_StartTextInput();
+  // SDL_StartTextInput();
 
   // Set the camera speed for how fast we move.
   float cameraSpeed = 1.0f;
@@ -204,29 +204,29 @@ void SDLGraphicsProgram::Loop() {
 
         // Handle keyboard presses
         case SDL_EVENT_KEY_DOWN:
-          switch (e.key.keysym.sym) {
-            case SDLK_LEFT:
-              m_renderer->GetCamera(0)->MoveLeft(cameraSpeed);
-              break;
-            case SDLK_RIGHT:
-              m_renderer->GetCamera(0)->MoveRight(cameraSpeed);
-              break;
-            case SDLK_UP:
-              m_renderer->GetCamera(0)->MoveForward(cameraSpeed);
-              break;
-            case SDLK_DOWN:
-              m_renderer->GetCamera(0)->MoveBackward(cameraSpeed);
-              break;
-            case SDLK_RSHIFT:
-              m_renderer->GetCamera(0)->MoveUp(cameraSpeed);
-              break;
-            case SDLK_RCTRL:
-              m_renderer->GetCamera(0)->MoveDown(cameraSpeed);
-              break;
-            case SDLK_ESCAPE:
-              quit = true;
-              // break;
-          }
+          // switch (e.key.keysym.sym) {
+          //   case SDLK_LEFT:
+          //     m_renderer->GetCamera(0)->MoveLeft(cameraSpeed);
+          //     break;
+          //   case SDLK_RIGHT:
+          //     m_renderer->GetCamera(0)->MoveRight(cameraSpeed);
+          //     break;
+          //   case SDLK_UP:
+          //     m_renderer->GetCamera(0)->MoveForward(cameraSpeed);
+          //     break;
+          //   case SDLK_DOWN:
+          //     m_renderer->GetCamera(0)->MoveBackward(cameraSpeed);
+          //     break;
+          //   case SDLK_RSHIFT:
+          //     m_renderer->GetCamera(0)->MoveUp(cameraSpeed);
+          //     break;
+          //   case SDLK_RCTRL:
+          //     m_renderer->GetCamera(0)->MoveDown(cameraSpeed);
+          //     break;
+          //   case SDLK_ESCAPE:
+          //     quit = true;
+          //     // break;
+          // }
           break;
 
         // Handle mouse movements
@@ -291,7 +291,7 @@ void SDLGraphicsProgram::Loop() {
     SDL_GL_SwapWindow(GetSDLWindow());
   }
   // Disable text input
-  SDL_StopTextInput();
+  // SDL_StopTextInput();
 }
 
 // Get Pointer to Window
