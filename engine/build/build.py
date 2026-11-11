@@ -1,4 +1,3 @@
-import os
 import platform
 import subprocess
 
@@ -17,7 +16,7 @@ if platform.system() == "Linux":
 elif platform.system() == "Darwin":
     ARGUMENTS += " -D MAC"
 elif platform.system() == "Windows":
-    ARGUMENTS += "-D MINGW -static-libgcc -static-libstdc++ -mwindows"
+    ARGUMENTS += " -D MINGW -static-libgcc -static-libstdc++ -mwindows"
     LIBRARIES += f"-lmingw32 -L ./lib"
     EXECUTABLE += ".exe"
 
@@ -32,7 +31,7 @@ print("Compiling " + EXECUTABLE + " on " + platform.system())
 print(compile_string)
 print("========================================================================")
 # Run our command
-exit_code = os.system(compile_string)
+exit_code = subprocess.call(compile_string, shell=True)
 
 if exit_code == 1:
     print("Build Failed")
